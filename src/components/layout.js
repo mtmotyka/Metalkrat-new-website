@@ -1,55 +1,69 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { CookiesProvider, withCookies } from "react-cookie"
 
 import Header from "./header"
-import "./layout.css"
+import Footer from "./footer"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+import "../assets/sass/style.scss"
 
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
-  )
+class Layout extends React.Component {
+  state = {
+    cookieOpen: false,
+  }
+  componentDidMount() {
+    const { cookies } = this.props
+    const isAcceptedCoookie = !!cookies.get("cookie-accept-metalkrat")
+    !isAcceptedCoookie && this.setState({ cookieOpen: true })
+  }
+
+  acceptCookie = () => {
+    const { cookies } = this.props
+
+    const promiseSetCookie = new Promise(resolve =>
+      resolve(cookies.set("cookie-accept-metalkrat", "active", { path: "/" }))
+    )
+    promiseSetCookie.then(() => {
+      this.setState({ cookieOpen: false })
+    })
+  }
+
+  render() {
+    const { children } = this.props
+    return (
+      <>
+        <CookiesProvider>
+          <Header />
+          <main>{children}</main>
+          {
+            // <div
+            //   className={`cookie-baner ${
+            //     this.state.cookieOpen ? "open" : ""
+            //   }`}
+            //   id="mainBelt"
+            // >
+            //   <img
+            //     src={require("../assets/images/ico-cookie.svg")}
+            //     alt=""
+            //     className="cookie-baner__icon"
+            //   />
+            //   <p className="cookie-baner__text">
+            //     Aby zoptymalizować naszą stronę internetową i stale ją
+            //     ulepszać, używamy plików cookie.{" "}
+            //     <Link to="/polityka-cookies">Dowiedz się więcej</Link>
+            //   </p>
+            //   <button
+            //     className="btn cookie-baner__button"
+            //     onClick={this.acceptCookie}
+            //   >
+            //     Akceptuję
+            //   </button>
+            // </div>
+          }
+          <Footer />
+        </CookiesProvider>
+      </>
+    )
+  }
 }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
-export default Layout
+export default withCookies(Layout)

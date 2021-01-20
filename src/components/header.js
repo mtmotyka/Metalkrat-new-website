@@ -1,42 +1,43 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React, { useEffect, useState } from "react"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false)
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setIsScrolled(window.scrollY > 200)
+    })
+  }, [])
 
-Header.defaultProps = {
-  siteTitle: ``,
+  return (
+    <header className={`header ${isScrolled ? "shrink" : ""}`}>
+      <p className="header__logo">
+        METAL<span>KRAT</span>
+      </p>
+      <nav className="navigation">
+        <ul className="navigation__menu">
+          <li>
+            <Link to="/" activeClassName="current">
+              Strona główna
+            </Link>
+          </li>
+          <li>
+            <Link>Oferta</Link>
+          </li>
+          <li>
+            <Link>O firmie</Link>
+          </li>
+          <li>
+            <Link>Realizacje</Link>
+          </li>
+          <li>
+            <Link>Kontakt</Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  )
 }
 
 export default Header

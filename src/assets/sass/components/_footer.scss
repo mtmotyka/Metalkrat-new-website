@@ -1,0 +1,15 @@
+.footer {
+    background-color: $color-blue;
+    padding: 20px 15px;
+    margin-top: -7px;
+
+    &__text {
+        color: #fff;
+        text-align: center;
+        font-size: 15px;
+        
+        a {
+            color: $color-red;
+        }
+    }
+}

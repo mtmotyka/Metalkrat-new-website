@@ -1,0 +1,301 @@
+.home-hero {
+    width: 100%;
+    height: 100vh;
+    min-height: 768px;
+    padding: 0 16.66%;
+    background-image: url(../images/hero-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+
+    &:before {
+        @include pseudo;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.4;
+        z-index: 1;
+        left: 0;
+        top: 0;
+    }
+
+    .main-content {
+        z-index: 2;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+
+        &__title {
+            color: #fff;
+            font-size: 27px;
+            font-weight: $regular;
+            max-width: 800px;
+            letter-spacing: 1px;
+            margin-bottom: 60px;
+        }
+
+        &__name {
+            color: #fff;
+            font-size: 70px;
+            font-weight: $black;
+            letter-spacing: 0;
+        }
+    }
+}
+
+.home-about {
+    padding: 150px 0 150px;
+    background-image: url(../images/bg-pattern.png);
+    background-size: cover;
+
+    &__desc {
+        margin-bottom: 30px;
+    }
+
+    .single-item {
+        margin-bottom: 20px;
+
+        &__number {
+            font-size: 40px;
+            color: $color-blue;
+            font-weight: $bold;
+        }
+
+        &__desc {
+            font-size: 16px;
+            color: $color-blue;
+            margin-top: -10px;
+        }
+    }
+
+    .image-wrapper {
+        position: relative;
+        
+        .red-box {
+            position: absolute;
+            background-color: $color-red;
+            bottom: -25px;
+            left: -30px;
+            padding: 40px 30px;
+            
+            &:before {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 0 31px 34px;
+                border-color: transparent transparent #ff3314 transparent;
+                position: absolute;
+                top: -29px;
+                content: "";
+                right: 0;
+            }
+
+            &__number {
+                font-size: 50px;
+                color: #fff;
+                text-align: center;
+            }
+
+            &__desc {
+                text-align: center;
+                color: #fff;
+                font-size: 15px;
+                font-weight: $light;
+            }
+        }
+    }
+}
+
+.home-offer {
+
+    .single-item {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        min-height: 565px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 15px 60px;
+        
+        &:hover {
+            &:before {
+                opacity: 0.7;
+            }
+        }
+
+        &:before {
+            @include pseudo;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            z-index: 1;
+            opacity: 0.6;
+            transition: .4s;
+        }
+
+        &--1 {
+            background-image: url(../images/tile-1.jpg);
+        }
+
+        &--2 {
+            background-image: url(../images/tile-2.jpg);
+        }
+
+        &--3 {
+            background-image: url(../images/tile-3.jpg);
+        }
+
+        &--4 {
+            background-image: url(../images/tile-4.jpg);
+        }
+
+        &__title {
+            z-index: 2;
+            position: relative;
+            color: #fff;
+            font-weight: $extra-bold;
+            font-size: 22px;
+            text-transform: uppercase;
+            text-align: center;
+
+        }
+
+        &__desc {
+            z-index: 2;
+            position: relative;
+            color: #fff;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        &__button {
+            z-index: 2;
+            position: relative;
+            font-size: 18px;
+            color: #fff;
+            text-align: center;
+            text-decoration: underline;
+            transition: all .4s;
+            cursor: pointer;
+            text-transform: capitalize;
+
+            &:hover {
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+
+.home-special-offer {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url(../images/podwojnie.jpg);
+    min-height: 600px;
+    position: relative;
+
+    .information-box {
+        position: absolute;
+        right: 16.66%;
+        top: 50%;
+        transform: translate(0, -50%);
+        background-color: $color-blue;
+        padding: 50px 40px;
+        max-width: 600px;
+
+        &__title {
+            font-size: 28px;
+            font-weight: $extra-bold;
+            color: #fff;
+
+            span {
+                font-weight: $black;
+            }
+
+            &:last-of-type {
+                margin-bottom: 30px;
+            }
+        }
+
+        &__desc {
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+
+    }
+}
+
+.home-gallery {
+    padding: 150px 0 150px;
+    background: rgb(247,247,253);
+    background: linear-gradient(180deg, rgba(247,247,253,1) 70%, rgba(255,255,255,1) 30%);
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    .single-slide {
+        padding: 0 5px;
+        .image-container {
+            width: 100%;
+            min-height: 350px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+
+            $numbers: (1, 2, 3, 4);
+            @each $number in $numbers {
+                &--#{$number} {
+                    background-image: url('../images/gallery-#{$number}.jpg');
+                }
+            }
+        }
+    }
+}
+
+.home-contact {
+    background-color: rgba(247,247,253,1);
+    padding-top: 40px;
+
+    &__title {
+        text-align: center;
+    }
+
+    .inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        &__text {
+            font-weight: $bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        &__link {
+            &:hover {
+                color: $color-red;
+                text-align: center;
+            }
+        }
+    }
+    
+    .map-container {
+        margin-top: 40px;
+        iframe {
+            filter: grayscale(1);
+        }
+    }
+}

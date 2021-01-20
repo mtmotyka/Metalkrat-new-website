@@ -1,0 +1,52 @@
+.btn {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: $bold;
+    color: #fff;
+    padding: 15px 30px;
+    transition: all .25s;
+    border-radius: 0;
+    appearance: none;
+    background-image: linear-gradient(to left, #FF3514, #d62d12, #FF3514);
+    background-position: right;
+    background-size: 200%;
+    transition: 0.6s;
+    padding: 17px 80px 17px 31px;
+    letter-spacing: 1.5px;
+    position: relative;
+
+    &:after {
+        @include pseudo;
+        width: 15px;
+        height: 15px;
+        background-image: url(../images/ico-arrow-white.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        right: 22px;
+        top: 50%;
+        transform: translate(0, -50%);
+        transition: all .3s;
+    }
+
+    &:hover {
+        background-position: left;
+        color: #fff;
+
+        &:after {
+            right: 17px
+        }
+    }
+
+    &--white {
+        @extend .btn;
+        color: #333;
+        background-color: #fff;
+        border: 2px solid #fff;
+
+        &:hover {
+            background-color: transparent;
+            color: #fff!important;
+        }
+    }
+}
