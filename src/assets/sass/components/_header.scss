@@ -28,6 +28,10 @@
                 li {
                     a {
                         padding-bottom: 18px;
+
+                        @include media-breakpoint-down(sm) {
+                            padding-bottom: 5px;
+                        }
                     }
                 }
             }

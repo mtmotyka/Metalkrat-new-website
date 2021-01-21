@@ -19,19 +19,21 @@ const Header = () => {
       </Link>
       <nav className={`navigation ${isMenuOpen === true ? "opened" : ""}`}>
         <ul className="navigation__menu ">
-          <li>
-            <Link to="/">Strona główna</Link>
+          <li onClick={() => setIsMenuOpen(false)}>
+            <Link to="/" onClick={() => setIsMenuOpen(false)}>
+              Strona główna
+            </Link>
           </li>
-          <li>
+          <li onClick={() => setIsMenuOpen(false)}>
             <AnchorLink to="/#oferta">Oferta</AnchorLink>
           </li>
-          <li>
+          <li onClick={() => setIsMenuOpen(false)}>
             <AnchorLink to="/#realizacje">Realizacje</AnchorLink>
           </li>
-          <li>
+          <li onClick={() => setIsMenuOpen(false)}>
             <AnchorLink to="/#o-firmie">O firmie</AnchorLink>
           </li>
-          <li>
+          <li onClick={() => setIsMenuOpen(false)}>
             <AnchorLink to="/#kontakt">Kontakt</AnchorLink>
           </li>
         </ul>

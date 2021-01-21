@@ -18,6 +18,10 @@
         padding: 150px 15px 0;
     }
 
+    @include media-breakpoint-down(xs) {
+        background-attachment: unset;
+    }
+
     &:before {
         @include pseudo;
         width: 100%;
