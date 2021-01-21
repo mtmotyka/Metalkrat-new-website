@@ -1,0 +1,52 @@
+.product-section {
+    padding: 200px 0 0;
+
+    &:last-of-type {
+        padding: 200px 0 100px;
+    }
+
+    .text-container {
+        padding-right: 6%;
+
+        &--right {
+            padding-left: 6%;
+            padding-right: 0;
+        }
+
+        &__title {
+            line-height: 1.1;
+        }
+
+        &__desc {
+            strong {
+                color: $color-blue;
+            }
+        }
+
+        &__list {
+            @include reset-list;
+            padding-left: 15px;
+            margin: 15px 0;
+
+            li {
+                position: relative;
+                font-size: 16px;
+                margin-bottom: 8px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                &:before {
+                    @include pseudo;
+                    width: 5px;
+                    height: 5px;
+                    background-color: $color-blue;
+                    left: -12px;
+                    top: 13px;
+                    transform: translate(0, -50%);
+                }
+            }
+        }
+    }
+}

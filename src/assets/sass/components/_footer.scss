@@ -2,14 +2,16 @@
     background-color: $color-blue;
     padding: 20px 15px;
     margin-top: -7px;
+    border-top: 1px solid rgba($color: #fff, $alpha: 0.4);
 
     &__text {
         color: #fff;
         text-align: center;
-        font-size: 15px;
+        font-size: 13px;
         
         a {
             color: $color-red;
+            font-weight: $bold;
         }
     }
 }

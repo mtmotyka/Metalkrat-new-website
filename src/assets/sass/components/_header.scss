@@ -30,9 +30,17 @@
         text-transform: uppercase;
         font-size: 28px;
         font-weight: $black;
-
+        color: $color-blue;
         span {
-            color: $color-red
+            color: $color-red;
+            transition: all .4s
+        }
+
+        &:hover {
+            color: $color-blue;
+            span {
+                color: $color-blue
+            }
         }
     }
 

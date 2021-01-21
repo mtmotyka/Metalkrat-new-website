@@ -12,9 +12,9 @@ const Header = () => {
 
   return (
     <header className={`header ${isScrolled ? "shrink" : ""}`}>
-      <p className="header__logo">
+      <Link to="/" className="header__logo">
         METAL<span>KRAT</span>
-      </p>
+      </Link>
       <nav className="navigation">
         <ul className="navigation__menu">
           <li>
@@ -23,16 +23,16 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link>Oferta</Link>
+            <a href="/#oferta">Oferta</a>
           </li>
           <li>
-            <Link>O firmie</Link>
+            <a href="/#realizacje">Realizacje</a>
           </li>
           <li>
-            <Link>Realizacje</Link>
+            <a href="/#o-firmie">O firmie</a>
           </li>
           <li>
-            <Link>Kontakt</Link>
+            <a href="/#kontakt">Kontakt</a>
           </li>
         </ul>
       </nav>

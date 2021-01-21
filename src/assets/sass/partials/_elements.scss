@@ -29,7 +29,7 @@
         transition: all .3s;
     }
 
-    &:hover {
+    &:hover, &:focus {
         background-position: left;
         color: #fff;
 

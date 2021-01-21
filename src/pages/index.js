@@ -25,11 +25,12 @@ const IndexPage = () => {
             największy wybór standardowych i specjalnych bram wjazdowych,
             ogrodzeń, furtek oraz konstrukcji stalowych
           </h1>
-          <a href="#start" className="btn">
+          <a href="#oferta" className="btn">
             Więcej
           </a>
         </div>
       </section>
+      <span className="anchor" id="o-firmie"></span>
       <section className="home-about">
         <div className="container">
           <div className="row align-items-center">
@@ -90,58 +91,67 @@ const IndexPage = () => {
           </div>
         </div>
       </section>
+      <span className="anchor" id="oferta"></span>
       <section className="home-offer">
         <div className="row no-gutters">
           <div className="col-md-3">
-            <div className="single-item single-item--1">
-              <h3 className="single-item__title">Bramy przesuwne</h3>
-              <p className="single-item__desc">
-                Bramy wjazdowe standardowe i specjalne w tym m.in podwójnie
-                (potrójnie) zsuwane na jedną stronę, przesuwne łukowe.
-                Wypełnienie dowolne.
-              </p>
-              <Link to="/" className="single-item__button">
-                Dowiedz się więcej
-              </Link>
-            </div>
+            <Link to="/bramy-przesuwne">
+              <div className="single-item single-item--1">
+                <h3 className="single-item__title">Bramy przesuwne</h3>
+                <p className="single-item__desc">
+                  Bramy wjazdowe standardowe i specjalne w tym m.in podwójnie
+                  (potrójnie) zsuwane na jedną stronę, przesuwne łukowe.
+                  Wypełnienie dowolne.
+                </p>
+                <Link to="/bramy-przesuwne" className="single-item__button">
+                  Dowiedz się więcej
+                </Link>
+              </div>
+            </Link>
           </div>
           <div className="col-md-3">
-            <div className="single-item single-item--2">
-              <h3 className="single-item__title">Bramy skrzydłowe</h3>
-              <p className="single-item__desc">
-                Bramy uchylne praktycznie bez ograniczeń. Uchylno przesuwne,
-                uchylno łamane, uchylne otwierane "pod górę". Wypełnienie
-                dowolne.
-              </p>
-              <Link to="/" className="single-item__button">
-                Dowiedz się więcej
-              </Link>
-            </div>
+            <Link to="/bramy-skrzydlowe">
+              <div className="single-item single-item--2">
+                <h3 className="single-item__title">Bramy skrzydłowe</h3>
+                <p className="single-item__desc">
+                  Bramy uchylne praktycznie bez ograniczeń. Uchylno przesuwne,
+                  uchylno łamane, uchylne otwierane "pod górę". Wypełnienie
+                  dowolne.
+                </p>
+                <Link to="/bramy-skrzydlowe" className="single-item__button">
+                  Dowiedz się więcej
+                </Link>
+              </div>
+            </Link>
           </div>
           <div className="col-md-3">
-            <div className="single-item single-item--3">
-              <h3 className="single-item__title">Furtki i ogrodzenia</h3>
-              <p className="single-item__desc">
-                Ogrodzenia i furtki dopasowane wizualnie i technologicznie do
-                bramy oraz pozostałych konstrukcji. Konstrukcje stalowe,
-                wypełnienie dowolne.
-              </p>
-              <Link to="/" className="single-item__button">
-                Dowiedz się więcej
-              </Link>
-            </div>
+            <Link to="/furtki-i-ogrodzenia">
+              <div className="single-item single-item--3">
+                <h3 className="single-item__title">Furtki i ogrodzenia</h3>
+                <p className="single-item__desc">
+                  Ogrodzenia i furtki dopasowane wizualnie i technologicznie do
+                  bramy oraz pozostałych konstrukcji. Konstrukcje stalowe,
+                  wypełnienie dowolne.
+                </p>
+                <Link to="/furtki-i-ogrodzenia" className="single-item__button">
+                  Dowiedz się więcej
+                </Link>
+              </div>
+            </Link>
           </div>
           <div className="col-md-3">
-            <div className="single-item single-item--4">
-              <h3 className="single-item__title">Konstrukcje stalowe</h3>
-              <p className="single-item__desc">
-                Konstrukcje takie jak wiaty, balustrady, poręcze, metalowe
-                schody itp. itd.
-              </p>
-              <Link to="/" className="single-item__button">
-                Dowiedz się więcej
-              </Link>
-            </div>
+            <Link to="/konstrukcje-stalowe">
+              <div className="single-item single-item--4">
+                <h3 className="single-item__title">Konstrukcje stalowe</h3>
+                <p className="single-item__desc">
+                  Konstrukcje takie jak wiaty, balustrady, poręcze, metalowe
+                  schody itp. itd.
+                </p>
+                <Link to="/konstrukcje-stalowe" className="single-item__button">
+                  Dowiedz się więcej
+                </Link>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -158,11 +168,12 @@ const IndexPage = () => {
             windzie. Zsuwana na jedna stronę, jedno skrzydło zachodzi na drugie.
             Przy takiej konstrukcji potrzeba ok. tylko 70% miejsca
           </p>
-          <Link to="/" className="btn">
+          <Link to="/bramy-przesuwne#podwojnie" className="btn">
             Dowiedz się więcej
           </Link>
         </div>
       </section>
+      <span className="anchor" id="realizacje"></span>
       <section className="home-gallery">
         <div className="container">
           <h2 className="home-gallery__title">Wybrane realizacje</h2>
@@ -192,6 +203,7 @@ const IndexPage = () => {
           </div>
         </div>
       </section>
+      <span className="anchor" id="kontakt"></span>
       <section className="home-contact">
         <div className="container">
           <h2 className="home-contact__title">Kontakt</h2>

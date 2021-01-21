@@ -96,6 +96,7 @@ address {
 }
 li {
   font-weight: $regular;
+  font-size: $font-size-base;
 }
 .appleFix {
   overflow: hidden;
@@ -116,11 +117,14 @@ li {
 
 //Pages
 @import "pages/_page-home";
+@import "pages/_page-offer";
 
 
 //Components
 @import "components/_header";
 @import "components/_footer";
+@import "components/_subpage-header";
+@import "components/_order-baner";
 
 // Media
 @import "modules/_media";
