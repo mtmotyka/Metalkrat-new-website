@@ -168,9 +168,10 @@ const IndexPage = () => {
             Postaw na bramę <span>podwójnie zsuwaną</span>
           </h3>
           <p className="information-box__desc">
-            Autorska konstrukcja, w której brama zachowuje się jak np. drzwi w
-            windzie. Zsuwana na jedna stronę, jedno skrzydło zachodzi na drugie.
-            Przy takiej konstrukcji potrzeba ok. tylko 70% miejsca
+            Autorska konstrukcja, w której brama składa się z dwóch skrzydeł i
+            zsuwa się na jedną stornę, podobnie jak drzwi w windzie. Dzięki temu
+            można ją montować tam, gdzie jest za mało miejsca na klasyczną bramę
+            zsuwaną. Wystarczy tylko <strong>70% długości światła</strong>.
           </p>
           <Link to="/bramy-przesuwne#podwojnie" className="btn">
             Dowiedz się więcej
