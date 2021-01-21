@@ -1,5 +1,6 @@
 import React from "react"
 import Slider from "react-slick"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -160,6 +161,36 @@ const BramySkrzydlowe = () => {
         </div>
       </section>
       <OrderBaner />
+      <div className="offer-navigation">
+        <h2 className="offer-navigation__title">To nie to czego szukasz?</h2>
+        <p className="offer-navigation__text">Sprawdź inne oferty</p>
+        <div className="row no-gutters">
+          <div className="col-md-4">
+            <div className="single-tile">
+              <h3 className="single-tile__title">Bramy przesuwne</h3>
+              <Link to="/bramy-przesuwne" className="single-tile__link">
+                Sprawdź <span>{">"}</span>
+              </Link>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div className="single-tile">
+              <h3 className="single-tile__title">Furtki i ogrodzenia</h3>
+              <Link to="/furtki-i-ogrodzenia" className="single-tile__link">
+                Sprawdź <span>{">"}</span>
+              </Link>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div className="single-tile">
+              <h3 className="single-tile__title">Konstrukcje stalowe</h3>
+              <Link to="/konstrukcje-stalowe" className="single-tile__link">
+                Sprawdź <span>{">"}</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </Layout>
   )
 }

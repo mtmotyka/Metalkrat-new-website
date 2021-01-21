@@ -6,8 +6,12 @@
 
     &__text {
         color: #fff;
-        text-align: center;
         font-size: 13px;
+        text-align: center;
+
+        &:first-of-type {
+            margin-bottom: 5px;
+        }
         
         a {
             color: $color-red;

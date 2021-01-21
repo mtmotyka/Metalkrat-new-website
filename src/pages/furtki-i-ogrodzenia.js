@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -6,15 +7,6 @@ import SubpageHeader from "../components/subpageHeader"
 import OrderBaner from "../components/orderBaner"
 
 const FurtkiOgrodzenia = () => {
-  const sliderSettings = {
-    dots: true,
-    arrows: true,
-    infinite: true,
-    draggable: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  }
-
   return (
     <Layout>
       <SEO title="Furtki i ogrodzenia" />
@@ -32,7 +24,7 @@ const FurtkiOgrodzenia = () => {
                   stalowe, wypełnienie dowolne.
                 </p>
                 <ul className="text-container__list">
-                  <li>Możliwość wyboru storny otwierania furtki</li>
+                  <li>Możliwość wyboru strony otwierania furtki</li>
                   <li>
                     Instalacja domofonów, wideodomofonów, zamków oraz
                     elektrozaczepów
@@ -55,6 +47,36 @@ const FurtkiOgrodzenia = () => {
         </div>
       </section>
       <OrderBaner />
+      <div className="offer-navigation">
+        <h2 className="offer-navigation__title">To nie to czego szukasz?</h2>
+        <p className="offer-navigation__text">Sprawdź inne oferty</p>
+        <div className="row no-gutters">
+          <div className="col-md-4">
+            <div className="single-tile">
+              <h3 className="single-tile__title">Bramy przesuwne</h3>
+              <Link to="/bramy-przesuwne" className="single-tile__link">
+                Sprawdź <span>{">"}</span>
+              </Link>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div className="single-tile">
+              <h3 className="single-tile__title">Bramy skrzydłowe</h3>
+              <Link to="/bramy-skrzydlowe" className="single-tile__link">
+                Sprawdź <span>{">"}</span>
+              </Link>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div className="single-tile">
+              <h3 className="single-tile__title">Konstrukcje stalowe</h3>
+              <Link to="/konstrukcje-stalowe" className="single-tile__link">
+                Sprawdź <span>{">"}</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </Layout>
   )
 }

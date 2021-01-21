@@ -10,10 +10,18 @@
     background-color: #fff;
     top: 0;
 
+    @include media-breakpoint-down(lg) {
+        padding: 20px 15px;
+    }
+
     &.shrink {
         box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
         -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
         padding: 10px 8.33%;
+
+        @include media-breakpoint-down(lg) {
+            padding: 10px 15px;
+        }
 
         .navigation {
             &__menu {
@@ -45,14 +53,40 @@
     }
 
     .navigation {
+        @include media-breakpoint-down(sm) {
+            position: fixed;
+            top: 0;
+            height: 100vh;
+            width: 100%;
+            transform: translate(100%, 0);
+            right: 0;
+            background-color: #fff;
+            transition: all .25s
+        }
+
+        &.opened {
+            transform: translate(0, 0)
+        }
+
         &__menu {
             @include reset-list;
             display: flex;
             justify-content: flex-end;
             align-items: center;
 
+            @include media-breakpoint-down(sm) {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+
             li {
                 margin-right: 33px;
+
+                @include media-breakpoint-down(sm) {
+                    margin: 15px 0;
+                }
 
                 &:last-of-type {
                     margin-right: 0;
@@ -64,6 +98,11 @@
                     padding-bottom: 28px;
                     transition: all .5s;
                     color: #0d2d3e;
+
+                    @include media-breakpoint-down(sm) {
+                        padding-bottom: 5px;
+                        font-size: 19px;
+                    }
 
                     &.current {
                         border-bottom: 2px solid $color-red;

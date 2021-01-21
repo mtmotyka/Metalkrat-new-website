@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react"
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -15,8 +16,8 @@ const Header = () => {
       <Link to="/" className="header__logo">
         METAL<span>KRAT</span>
       </Link>
-      <nav className="navigation">
-        <ul className="navigation__menu">
+      <nav className={`navigation ${isMenuOpen === true ? "opened" : ""}`}>
+        <ul className="navigation__menu ">
           <li>
             <Link to="/" activeClassName="current">
               Strona główna
@@ -36,6 +37,20 @@ const Header = () => {
           </li>
         </ul>
       </nav>
+      <button
+        type="button"
+        aria-label="Otwórz menu"
+        className={`hamburger hamburger--squeeze ${
+          isMenuOpen === true ? "is-active" : ""
+        }`}
+        onClick={e => setIsMenuOpen(!isMenuOpen)}
+      >
+        {Array(4)
+          .fill(null)
+          .map(index => (
+            <span key={index} />
+          ))}
+      </button>
     </header>
   )
 }

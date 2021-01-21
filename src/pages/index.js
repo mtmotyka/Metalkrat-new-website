@@ -13,6 +13,15 @@ const IndexPage = () => {
     draggable: true,
     slidesToShow: 2,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   }
 
   return (
@@ -47,25 +56,19 @@ const IndexPage = () => {
                 numquam vero enim odit voluptates vel.
               </p>
               <div className="row">
-                <div className="col-md-6">
-                  <div className="single-item">
-                    <p className="single-item__number">25+</p>
-                    <p className="single-item__desc">Lat doświadczenia</p>
-                  </div>
-                </div>
-                <div className="col-md-6">
+                <div className="col-md-6 col-sm-4">
                   <div className="single-item">
                     <p className="single-item__number">4</p>
                     <p className="single-item__desc">Specjalizacje</p>
                   </div>
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-6 col-sm-4">
                   <div className="single-item">
                     <p className="single-item__number">10</p>
                     <p className="single-item__desc">Lat gwarancji</p>
                   </div>
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-6 col-sm-4">
                   <div className="single-item">
                     <p className="single-item__number">600+</p>
                     <p className="single-item__desc">
@@ -89,12 +92,13 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
+          <h2 className="home-about__second-title">Oferta</h2>
         </div>
       </section>
       <span className="anchor" id="oferta"></span>
       <section className="home-offer">
         <div className="row no-gutters">
-          <div className="col-md-3">
+          <div className="col-xl-3 col-md-6">
             <Link to="/bramy-przesuwne">
               <div className="single-item single-item--1">
                 <h3 className="single-item__title">Bramy przesuwne</h3>
@@ -109,7 +113,7 @@ const IndexPage = () => {
               </div>
             </Link>
           </div>
-          <div className="col-md-3">
+          <div className="col-xl-3 col-md-6">
             <Link to="/bramy-skrzydlowe">
               <div className="single-item single-item--2">
                 <h3 className="single-item__title">Bramy skrzydłowe</h3>
@@ -124,7 +128,7 @@ const IndexPage = () => {
               </div>
             </Link>
           </div>
-          <div className="col-md-3">
+          <div className="col-xl-3 col-md-6">
             <Link to="/furtki-i-ogrodzenia">
               <div className="single-item single-item--3">
                 <h3 className="single-item__title">Furtki i ogrodzenia</h3>
@@ -139,7 +143,7 @@ const IndexPage = () => {
               </div>
             </Link>
           </div>
-          <div className="col-md-3">
+          <div className="col-xl-3 col-md-6">
             <Link to="/konstrukcje-stalowe">
               <div className="single-item single-item--4">
                 <h3 className="single-item__title">Konstrukcje stalowe</h3>
