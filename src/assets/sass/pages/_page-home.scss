@@ -396,9 +396,9 @@
         }
 
         &__link {
+            text-align: center;
             &:hover {
                 color: $color-red;
-                text-align: center;
             }
         }
     }
