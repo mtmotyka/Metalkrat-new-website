@@ -1,4 +1,5 @@
 import React from "react"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const OrderBaner = () => {
   return (
@@ -8,9 +9,9 @@ const OrderBaner = () => {
           Zamów już teraz! <br />
           <span>Skontaktuj się z nami aby ustalić szczegóły projektu.</span>
         </p>
-        <a href="/#kontakt" className="btn">
+        <AnchorLink to="/#kontakt" className="btn">
           Skontaktuj się
-        </a>
+        </AnchorLink>
       </div>
     </div>
   )

@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Slider from "react-slick"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -34,9 +35,9 @@ const IndexPage = () => {
             największy wybór standardowych i specjalnych bram wjazdowych,
             ogrodzeń, furtek oraz konstrukcji stalowych
           </h1>
-          <a href="#oferta" className="btn">
+          <AnchorLink to="#oferta" className="btn">
             Więcej
-          </a>
+          </AnchorLink>
         </div>
       </section>
       <span className="anchor" id="o-firmie"></span>

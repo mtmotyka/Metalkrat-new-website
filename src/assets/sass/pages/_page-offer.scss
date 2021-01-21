@@ -1,16 +1,36 @@
 .product-section {
     padding: 200px 0 0;
 
+    @include media-breakpoint-down(sm) {
+        padding: 120px 0 0;
+    }
+
     &:last-of-type {
         padding: 200px 0 100px;
+
+        @include media-breakpoint-down(sm) {
+            padding: 120px 0 100px;
+        }
     }
 
     .text-container {
         padding-right: 6%;
 
+        @include media-breakpoint-down(md) {
+            padding-right: 0;
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 60px;
+        }
+
         &--right {
             padding-left: 6%;
             padding-right: 0;
+
+            @include media-breakpoint-down(md) {
+                padding-left: 0;
+            }
         }
 
         &__title {
@@ -49,10 +69,22 @@
             }
         }
     }
+
+    img {
+        display: block;
+
+        @include media-breakpoint-down(sm) {
+            margin: 0 auto;
+        }
+    }
 }
 
 .offer-navigation {
     padding: 150px 0 0;
+
+    @include media-breakpoint-down(xs) {
+        padding: 100px 0 0;
+    }
 
     &__title {
         font-size: 40px;
@@ -61,9 +93,15 @@
         text-align: center;
         color: $color-blue;
         margin-bottom: 0;
+        padding: 0 15px;
 
         @include media-breakpoint-down(md) {
             font-size: 32px;
+        }
+
+        @include media-breakpoint-down(xs) {
+            font-size: 27px;
+            line-height: 1.2;
         }
     }
 
@@ -73,6 +111,12 @@
         font-weight: $regular;
         font-size: 28px;
         margin-bottom: 30px;
+        padding: 0 15px;
+
+        @include media-breakpoint-down(xs) {
+            font-size: 21px;
+            margin-bottom: 45px;
+        }
     }
 
     .single-tile {
@@ -83,8 +127,24 @@
         align-items: center;
         padding: 100px 15px;
 
+        @include media-breakpoint-down(md) {
+            padding: 100px 0;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 40px 15px;
+            border: none;
+            border-top: 1px solid $color-blue;
+        }
+
         &__title {
             margin-bottom: 10px;
+            font-weight: $bold;
+
+            @include media-breakpoint-down(md) {
+                font-size: 25px;
+                text-align: center;
+            }
         }
 
         &__link {

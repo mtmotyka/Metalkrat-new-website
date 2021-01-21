@@ -1,5 +1,6 @@
 import { Link } from "gatsby"
 import React, { useEffect, useState } from "react"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -19,21 +20,19 @@ const Header = () => {
       <nav className={`navigation ${isMenuOpen === true ? "opened" : ""}`}>
         <ul className="navigation__menu ">
           <li>
-            <Link to="/" activeClassName="current">
-              Strona główna
-            </Link>
+            <Link to="/">Strona główna</Link>
           </li>
           <li>
-            <a href="/#oferta">Oferta</a>
+            <AnchorLink to="/#oferta">Oferta</AnchorLink>
           </li>
           <li>
-            <a href="/#realizacje">Realizacje</a>
+            <AnchorLink to="/#realizacje">Realizacje</AnchorLink>
           </li>
           <li>
-            <a href="/#o-firmie">O firmie</a>
+            <AnchorLink to="/#o-firmie">O firmie</AnchorLink>
           </li>
           <li>
-            <a href="/#kontakt">Kontakt</a>
+            <AnchorLink to="/#kontakt">Kontakt</AnchorLink>
           </li>
         </ul>
       </nav>
