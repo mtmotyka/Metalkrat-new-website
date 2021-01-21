@@ -231,20 +231,11 @@
             transition: .4s;
         }
 
-        &--1 {
-            background-image: url(../images/tile-1.jpg);
-        }
-
-        &--2 {
-            background-image: url(../images/tile-2.jpg);
-        }
-
-        &--3 {
-            background-image: url(../images/tile-3.jpg);
-        }
-
-        &--4 {
-            background-image: url(../images/tile-4.jpg);
+        $numbers: (1, 2, 3, 4);
+        @each $number in $numbers {
+            &--#{$number} {
+                background-image: url('../images/tile-#{$number}.jpg');
+            }
         }
 
         &__title {

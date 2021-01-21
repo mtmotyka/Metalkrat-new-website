@@ -48,7 +48,7 @@
             transition: all .4s
         }
 
-        &:hover {
+        &:hover, &:focus {
             color: $color-blue;
             span {
                 color: $color-blue
