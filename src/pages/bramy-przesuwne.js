@@ -191,7 +191,7 @@ const BramyPrzesuwne = () => {
           <div className="col-md-4">
             <div className="single-tile">
               <h3 className="single-tile__title">Bramy skrzydłowe</h3>
-              <Link to="/bramy-przesuwne" className="single-tile__link">
+              <Link to="/bramy-skrzydlowe" className="single-tile__link">
                 Sprawdź <span>{">"}</span>
               </Link>
             </div>
