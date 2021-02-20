@@ -217,8 +217,8 @@ const IndexPage = () => {
             <p className="inner__text">
               Andrzej Motyka - Zakład Usług Technicznych Metalkrat <br />
             </p>
-            <a href="tel:+48000000000" className="inner__link">
-              +48 000 000 000
+            <a href="tel:+48732613301" className="inner__link">
+              +48 732 613 301
             </a>
             <a href="mailto:m.adnrzej@onet.eu" className="inner__link">
               m.andrzej@onet.eu
